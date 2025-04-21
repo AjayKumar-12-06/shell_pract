@@ -18,10 +18,10 @@ check_root
 
 validate(){
     if [ $1 -ne 0 ]; then
-        echo " $2 installing $R failure $N"
+        echo -e " $2 installing $R failure $N"
         exit 1
     else
-        echo "$2 installing $G success $N"
+        echo -e "$2 installing $G success $N"
     fi
 }
 
@@ -31,5 +31,5 @@ if [ $? -ne 0 ]; then
         dnf install mysql -y
         validate $? "installing mysql"
 else
-    echo "mysql already installed $Y Skkipping $N"
+    echo -e "mysql already installed $Y Skkipping $N"
 fi
