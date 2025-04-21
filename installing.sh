@@ -7,17 +7,17 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-dnf list installed mysql
-echo "mysql is not available, now it's going to install mysql"
+dnf list installed java
+echo "java is not available, now it's going to install java"
 
     if [ $? -ne 0 ]; then
-        dnf install mysql -y
+        dnf install java -y
             if [ $? -ne 0 ]; then
-                echo "mysql installing failure"
+                echo "java installing failure"
                 exit 1
             else
-                echo "mysql installing success"
+                echo "java installing success"
             fi
     else
-        echo "mysql already installed"
+        echo "java already installed"
     fi
