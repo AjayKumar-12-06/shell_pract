@@ -8,7 +8,7 @@ if [ $USERID -ne 0 ]; then
 fi
 
 dnf list installed mysql
-echo "git is not available, now it's going to install mysql"
+echo "mysql is not available, now it's going to install mysql"
 
     if [ $? -ne 0 ]; then
         dnf install mysql -y
