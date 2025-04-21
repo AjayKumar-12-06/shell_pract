@@ -8,9 +8,8 @@ if [ $USERID -ne 0 ]; then
 fi
 
 dnf list installed java
+if [ $? -ne 0 ]; then
 echo "java is not available, now it's going to install java"
-
-    if [ $? -ne 0 ]; then
         dnf install java -y
             if [ $? -ne 0 ]; then
                 echo "java installing failure"
@@ -21,3 +20,11 @@ echo "java is not available, now it's going to install java"
     else
         echo "java already installed"
     fi
+
+# dnf list installed mysql-server
+# if [ $? -ne 0 ]; then
+#     echo "MySQL is not installed. Installing MySQL..."
+#     dnf install mysql-server -y
+# else
+#     echo "MySQL is already installed."
+# fi
