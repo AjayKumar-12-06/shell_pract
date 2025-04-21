@@ -18,6 +18,6 @@ echo "mysql is not available, now it's going to inbstall mysql "
             else
                 echo "mysql installing success"
             fi
-    elif
+    else
         echo "mysql already installed"
     fi
