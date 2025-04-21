@@ -11,7 +11,7 @@ check_root (){
 
 check_root
 
-vaidate (){
+validate (){
     if [ $1 -ne 0 ]; then
         echo " $2 installing failure"
         exit 1
