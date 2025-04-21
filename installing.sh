@@ -7,17 +7,17 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-dnf list installed mysql
-echo "mysql is not available, now it's going to inbstall mysql "
+dnf list installed git
+echo "git is not available, now it's going to install mysql "
 
     if [ $? -ne 0 ]; then
-        dnf install mysql -y
+        dnf install git -y
             if [ $? -ne 0 ]; then
-                echo "Mysql installing failure"
+                echo "git installing failure"
                 exit 1
             else
-                echo "mysql installing success"
+                echo "git installing success"
             fi
     else
-        echo "mysql already installed"
+        echo "git already installed"
     fi
