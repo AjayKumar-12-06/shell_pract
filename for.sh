@@ -33,4 +33,5 @@ do
         validate $? "installing $package"
     else
         echo -e "Already $package is installed $Y Skkipping $N"
+    fi
 done
