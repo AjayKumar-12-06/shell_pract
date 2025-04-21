@@ -13,16 +13,15 @@ check_root
 
 vaidate (){
     if [ $1 -ne 0 ]; then
-        echo "installing failure"
+        echo " $2 installing failure"
         exit 1
     else
-        echo "isbntalling success"
+        echo " $2 installing success"
     fi
 }
 
 dnf list installed mysql
 if [ $? -ne 0 ]; then
-
 echo "mysql is not installed, going to installing mysql"
     dnf install mysql -y
         if [ $? -ne 0 ]; then
